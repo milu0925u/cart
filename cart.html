@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    
+        .cart {
+            /* position: absolute;
+            left: -170%;
+            top:-150%; */
+            width: 1368px;
+            margin: auto;
+            box-shadow: -8px 0 0 #0D0733, 8px 0 0 #0D0733,
+            -1px -1px 0 #0D0733,0 -3px 0 -1px #0D0733,3px -5px 0 #0D0733,
+            5px 2px 0 #512893,5px 4px 0 #0D0733;
+             
+
+        }
+
+        .cart_Header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 3fr 1fr 2fr 1fr 1fr;
+            grid-template-areas: ". checkbox Img Name Type Count Price ashcan .";
+            background-color: #7817F3;
+            padding-block: 15px;
+            padding-inline: 100px;
+            color: #ffffff;
+            box-shadow: -4px 0 0 #7817F3, 4px 0 0 #7817F3, 0 -3px 0 #7817F3;
+            margin-inline: 3px;
+
+
+
+        }
+
+        .cart_bg {
+            background-color: #512893;
+            padding-inline: 100px;
+            padding-block: 20px;
+        }
+
+        .cart_Book {
+            display: grid;
+            grid-template-columns: 1fr 1fr 3fr 1fr 2fr 1fr 1fr;
+            grid-template-areas: ". checkbox Img Name Type Count Price ashcan .";
+            background-color: #ffffff;
+            margin-bottom: 10px;
+            border-right-width: 13px;
+            border-bottom-width: 5px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 -3px #b3B3B3, 0 2px 0 black, 0 -2px 0 black, -13px 0 0 black, 13px 0 0 black;
+        }
+
+        .checkbox_HeaderGrid,
+        .checkbox_BookGrid,
+        .bookCount_HeaderGrid,
+        .bookCount_BookGrid,
+        .bookType_HeaderGrid,
+        .bookType_BookGrid,
+        .bookPrice_HeaderGrid,
+        .bookPrice_BookGrid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+ 
+        /* 去買單BTN */
+        .go-shop {
+            margin: 15px;
+            background: #FFE34E;
+            padding: 3px 30px;
+            box-shadow:
+                0 0 0 1px #FFE34E, 0 5px 0 -1px #FFE34E, 4px 0 0 -1px #FFE34E,
+                0 0 0 1px #FFE34E, 0 -5px 0 -1px #FFE34E, -4px 0 0 -1px #FFE34E,
+                0 0 0 3px #F3D52E, 0 6px 0 0 #F3D52E, 0 -6px 0 0 #F3D52E, 5px 0 0 0 #F3D52E, -5px 0 0 0 #F3D52E;
+
+        }
+        .ipadding {
+            padding-block: 3px;
+            padding-right: 20px;
+        }
+        /* 移動買單BTN的容器 */
+        .go-shop-div{
+            display: flex;
+            justify-content: end;
+            max-width: 100%;
+        }
+
+        /* 數量的圖 */
+        button,
+        input {
+            border: none;
+        }
+
+        .bookCount_BookGrid {
+            position: relative;
+        }
+
+        .bookCount_BookGrid>.cart-input {
+            background: #0D0733;
+            color: #ffffff;
+            width: 70px;
+            height: 22px;
+            text-align: center;
+            position: absolute;
+            left: 30%;
+
+
+        }
+
+        .bookCount_BookGrid>.subButton {
+            background: #9B6CFF;
+            color: #ffffff;
+            position: absolute;
+            left: 26%;
+            z-index: 1;
+            box-shadow:
+                0 0 0 1px #9B6CFF, 0 5px 0 -1px #9B6CFF, 4px 0 0 -1px #9B6CFF,
+                0 0 0 1px #9B6CFF, 0 -5px 0 -1px #9B6CFF, -4px 0 0 -1px #9B6CFF,
+                0 0 0 3px #0D0733, 0 6px 0 0 #0D0733, 0 -6px 0 0 #0D0733, 5px 0 0 0 #0D0733, -5px 0 0 0 #0D0733;
+        }
+
+        .bookCount_BookGrid>.addButton {
+            background: #9B6CFF;
+            color: #ffffff;
+            position: absolute;
+            left: 56%;
+            z-index: 1;
+            box-shadow:
+                0 0 0 1px #9B6CFF, 0 5px 0 -1px #9B6CFF, 4px 0 0 -1px #9B6CFF,
+                0 0 0 1px #9B6CFF, 0 -5px 0 -1px #9B6CFF, -4px 0 0 -1px #9B6CFF,
+                0 0 0 3px #0D0733, 0 6px 0 0 #0D0733, 0 -6px 0 0 #0D0733, 5px 0 0 0 #0D0733, -5px 0 0 0 #0D0733;
+
+
+        }
+
+        /* 圖片容器 */
+        .img-width {
+            width: 120px;
+            padding: 10px;
+        }
+
+        .img {
+            max-width: 100%;
+        }
+
+        /* 超過字數變... */
+        .p-nowrap {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        /* 全選按鈕 */
+        .allchecked {
+            color: white;
+            border: 1px solid white;
+            border-radius: 20%;
+            background-color: rgba(58, 57, 57, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart">
+        <div class="cart_Header">
+
+            <div class="checkbox_HeaderGrid">
+                <button class="allchecked">全選</button>
+            </div>
+            <div class="bookImg_HeaderGrid">
+            </div>
+            <div class="bookName_HeaderGrid">書名</div>
+            <div class="bookType_HeaderGrid">類型</div>
+            <div class="bookCount_HeaderGrid">數量</div>
+            <div class="bookPrice_HeaderGrid">金額</div>
+            <div class="ashcan_HeaderGrid"></div>
+        </div>
+
+        <div class="cart_bg">
+            <div class="cart_Book">
+                <div class="checkbox_BookGrid">
+                    <input type="checkbox">
+                </div>
+                <div class="bookImg_BookGrid img-width">
+                    <img src="./img/003.jpg" alt="" class="img">
+                </div>
+                <div class="bookName_BookGrid">
+                    <span><b>原子習慣</b></span>
+                    <span class="p-nowrap">
+                        此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
+                    </span>
+                </div>
+                <div class="bookType_BookGrid">文學</div>
+                <div class="bookCount_BookGrid">
+                    <button class="subButton"><i class="fa-solid fa-minus"></i></button>
+                    <input type="text" value="1" class="cart-input">
+                    <button class="addButton"><i class="fa-solid fa-plus"></i></button>
+
+                </div>
+                <div class="bookPrice_BookGrid">$300</div>
+                <div class="ashcan_BookGrid"><i class="fa-regular fa-trash-can"></i></div>
+            </div>
+            <div class="cart_Book">
+                <div class="checkbox_BookGrid">
+                    <input type="checkbox">
+                </div>
+                <div class="bookImg_BookGrid img-width">
+                    <img src="./img/003.jpg" alt="" class="img">
+                </div>
+                <div class="bookName_BookGrid">
+                    <span><b>原子習慣</b></span>
+                    <span class="p-nowrap">
+                        此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
+                    </span>
+                </div>
+                <div class="bookType_BookGrid">文學</div>
+                <div class="bookCount_BookGrid">
+                    <button class="subButton"><i class="fa-solid fa-minus"></i></button>
+                    <input type="text" value="1" class="cart-input">
+                    <button class="addButton"><i class="fa-solid fa-plus"></i></button>
+
+                </div>
+                <div class="bookPrice_BookGrid">$300</div>
+                <div class="ashcan_BookGrid"><i class="fa-regular fa-trash-can"></i></div>
+            </div>
+            <div class="cart_Book">
+                <div class="checkbox_BookGrid">
+                    <input type="checkbox">
+                </div>
+                <div class="bookImg_BookGrid img-width">
+                    <img src="./img/003.jpg" alt="" class="img">
+                </div>
+                <div class="bookName_BookGrid">
+                    <span><b>原子習慣</b></span>
+                    <span class="p-nowrap">
+                        此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
+                    </span>
+                </div>
+                <div class="bookType_BookGrid">文學</div>
+                <div class="bookCount_BookGrid">
+                    <button class="subButton"><i class="fa-solid fa-minus"></i></button>
+                    <input type="text" value="1" class="cart-input">
+                    <button class="addButton"><i class="fa-solid fa-plus"></i></button>
+
+                </div>
+                <div class="bookPrice_BookGrid">$300</div>
+                <div class="ashcan_BookGrid"><i class="fa-regular fa-trash-can"></i></div>
+            </div>
+            <div class="cart_Book">
+                <div class="checkbox_BookGrid">
+                    <input type="checkbox">
+                </div>
+                <div class="bookImg_BookGrid img-width">
+                    <img src="./img/003.jpg" alt="" class="img">
+                </div>
+                <div class="bookName_BookGrid">
+                    <span><b>原子習慣</b></span>
+                    <span class="p-nowrap">
+                        此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
+                    </span>
+                </div>
+                <div class="bookType_BookGrid">文學</div>
+                <div class="bookCount_BookGrid">
+                    <button class="subButton"><i class="fa-solid fa-minus"></i></button>
+                    <input type="text" value="1" class="cart-input">
+                    <button class="addButton"><i class="fa-solid fa-plus"></i></button>
+
+                </div>
+                <div class="bookPrice_BookGrid">$300</div>
+                <div class="ashcan_BookGrid"><i class="fa-regular fa-trash-can"></i></div>
+            </div>
+            <div class="go-shop-div">
+                <button class="go-shop">
+                    <i class="fa-solid fa-caret-right ipadding" style="color: #000000;"></i>
+                    <b>去買單</b>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
