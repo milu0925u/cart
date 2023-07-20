@@ -1,0 +1,50 @@
+      /* 點數背景 */
+      .point-bg {
+        width: 893px;
+        height: 130px;
+        padding: 30px;
+
+        background: var(--main-yellow);
+        box-shadow: 2px 0 0 var(--main-yellow), 5px 0 0 var(--main-yellow),
+          0 2px 0 var(--main-yellow), 0 5px 0 var(--main-yellow),
+          5px 0 0 var(--main-yellow), 0 1px 0 var(--main-yellow),
+          0 5px 0 var(--main-yellow), 0 5px 0 0 var(--main-yellow),
+          5px 0 0 0 var(--main-yellow), 0 -5px 0 0 var(--main-yellow),
+          -5px 0 0 0 var(--main-yellow), 0 -8px 0 var(--black),
+          0 8px 0 var(--black), -8px 0 0 var(--black), 8px 0 0 var(--black),
+          3px 0 0 3px var(--black), -3px 0 0 3px var(--black),
+          0 3px 0 3px var(--black), 0 -3px 0 3px var(--black);
+      }
+
+      /* 當前點數數 */
+      .point-input {
+        border-radius: 50px;
+        background: var(--colorful-purple, #7817f3);
+        width: 182px;
+        height: 31px;
+        text-align: center;
+        color: var(--white);
+      }
+
+      .point-radio-group {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .point-input {
+        text-align: center;
+        color: var(--white);
+        border-radius: 5px;
+        background: var(--main-darkpurple);
+      }
+      .point-input-btn {
+        background: var(--main-darkpink);
+        color: var(--white);
+        padding-inline:20px ;
+        padding-block:5px ;
+        box-shadow: 3px 0 0 var(--main-darkpink), 0 3px 0 var(--main-darkpink),-3px 0 0 var(--main-darkpink),0 -3px 0 var(--main-darkpink),
+          6px 0 0 #b3504a, 0 6px 0 #b3504a, 2px 2px 0 1px #b3504a;
+
+
+      }
