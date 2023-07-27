@@ -1,0 +1,220 @@
+/* 優惠卷框 */
+.coupon-bg {
+  padding: 10px;
+  background-color: var(--main-yellow);
+  box-shadow: 5px 0 0 var(--main-yellow), -5px 0 0 var(--main-yellow), 0 -5px 0 var(--main-yellow), 0 5px 0 var(--main-yellow),
+    8px 0 0 var(--black), -8px 0 0 var(--black), 0 -8px 0 var(--black), 0 8px 0 var(--black),
+    0 3px 0 3px var(--black), 0 -3px 0 3px var(--black), -3px 0 0 3px var(--black), 3px 0 0 3px var(--black);
+  overflow-y: auto;
+}
+
+/* 優惠卷/輸入框/已領取 */
+.coupon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  max-width: 100%;
+  padding-inline: 1.2rem;
+}
+
+.coupon-header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 已領取/所有優惠-底色 */
+.coupon-header-bg {
+  background-color: var(--main-darkpurple);
+}
+
+/* 已領取/所有優惠-外
+框*/
+.coupon-header-line {
+  box-shadow: 0 5px 0 var(--main-yellow), 5px 0 0 var(--main-yellow), 0 -5px 0 var(--main-yellow), -5px 0 0 var(--main-yellow),
+    0 7px 0 var(--black), 7px 0 0 var(--black), 0 -7px 0 var(--black), -7px 0 0 var(--black),
+    0 -4px 0 3px var(--black), 0 4px 0 3px var(--black), -4px 0 0 3px var(--black), 4px 0 0 3px var(--black);
+  border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><path d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='%23000' /></svg>");
+}
+
+
+/* 票卷部分 */
+
+
+.coupon-ticket {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  max-height: 150px;
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 3px 0 0 rgb(200, 200, 200), -3px 0 0 white, 0 -3px 0 white, 0 3px 0 rgb(200, 200, 200);
+}
+
+
+
+
+/* 未領取字體 */
+.font-s {
+  font-size: 0.8rem;
+}
+
+/* 票卷圖示 */
+.couponName {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 140px;
+  max-height: 100%;
+  color: white;
+  background: var(--main-colorpurple);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 3px var(--main-colorpurple);
+}
+
+.couponName span {
+  position: absolute;
+  padding: 5px 1rem;
+  border-radius: 5px;
+  bottom: 15%;
+}
+
+
+
+/* 領取按鈕 */
+.coupon-ticket-right {
+  background-color: var(--main-darkpink);
+  color: var(--white);
+  width: 150px;
+  max-height: 100%;
+  box-shadow: -5px 0 0 var(--main-darkpink), 0 -4px 0 var(--main-darkpink),
+    5px 0 0 1px #7E3834, 0 4px 0 1px #7E3834;
+}
+
+
+/* 折價金額 */
+.amount {
+  color: var(--main-colorpurple);
+  font-size: 2rem;
+}
+
+.amount-l {
+  color: var(--main-colorpurple);
+  font-size: 3rem;
+}
+
+/* 特殊字體尺寸或樣式 */
+.pixel-font {
+  font-family: "VT323-Regular";
+}
+
+/* 切換按鈕 */
+.checkbox {
+  background-color: var(--main-darkpurple);
+  position: relative;
+  margin: 0.5rem;
+}
+
+#coupon_toggle {
+  display: none;
+}
+
+.checkbox .toggle {
+  width: 140px;
+  height: 40px;
+  position: absolute;
+  left: -10px;
+  background: var(--main-yellow);
+  transition: 0.4s;
+}
+
+.checkbox .slide {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.checkbox .slide .text {
+  z-index: 100;
+}
+
+.state:checked+.checkbox .slide .toggle {
+  transform: translateX(125px);
+  background: var(--main-yellow);
+  color: #9b6cff;
+}
+
+/* 使用條件底部 */
+.Information-coupon {
+  display: flex;
+  border-radius: 50px;
+  color: white;
+  padding: 5px 1.5rem;
+  margin-block: 3px;
+  background-color: var(--main-purple);
+  align-items: center;
+  justify-content: center;
+}
+
+.my-auto {
+  padding: 10px;
+}
+
+/* ----------------------------- */
+
+
+@media screen and (max-width: 860px) {
+
+  .hiddentitle,
+  .coupon-hidden1 {
+    display: none;
+  }
+
+
+}
+
+@media screen and (max-width: 700px) {
+  .coupon-hidden2 {
+    display: none;
+  }
+
+  .coupon-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cdown"
+      "ctop"
+    ;
+
+
+  }
+
+  .coupon-header-left {
+    grid-area: ctop;
+    padding-top: 20px;
+  }
+
+  .coupon-header-bg {
+    grid-area: cdown;
+  }
+
+  .cart-div {
+    width:100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .checkbox .slide {
+    width: 500px;
+  }
+  .checkbox .toggle {
+    width: 250px;
+  }
+  .state:checked+.checkbox .slide .toggle {
+    transform: translateX(250px);
+  }
+}

@@ -1,0 +1,72 @@
+.go {
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow:
+    5px 0 0 var(--black), -5px 0 0 var(--black), 0 5px 0 var(--black), 0 -5px 0 var(--black),
+    8px 0 0 var(--main-colorpurple), -8px 0 0 var(--main-colorpurple), 0 8px 0 var(--main-colorpurple), 0 -8px 0 var(--main-colorpurple),
+    5px 0 0 4px var(--main-colorpurple), -5px 0 0 4px var(--main-colorpurple),
+    0 5px 0 4px var(--main-colorpurple), 0 -5px 0 4px var(--main-colorpurple);
+}
+
+
+.go>div>span {
+  color: red;
+}
+
+.go>div>.cart_coupon_name {
+  color: yellow;
+}
+
+
+/* 填寫btn */
+.cart-next-btn>button {
+  background: var(--main-yellow);
+  box-shadow: 0 10px 0 var(--main-yellow), 0 -10px 0 var(--main-yellow), 10px 0 0 var(--main-yellow), -10px 0 0 var(--main-yellow),
+    0 0 0 6px var(--main-yellow);
+}
+
+.cart-next-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "goshop gowrite";
+  border-top: 5px dotted white;
+  padding-top: 50px;
+}
+
+.goshop {
+  grid-area: goshop;
+}
+
+.gowrite {
+  grid-area: gowrite;
+}
+
+
+/* 完成btn */
+.cart-next-ok {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cart-next-ok>button {
+  background: var(--main-yellow);
+  box-shadow: 0 10px 0 var(--main-yellow), 0 -10px 0 var(--main-yellow), 10px 0 0 var(--main-yellow), -10px 0 0 var(--main-yellow),
+    0 0 0 6px var(--main-yellow);
+}
+
+
+.cart-next-p {
+  padding-bottom: 10px;
+}
+
+
+
+
+

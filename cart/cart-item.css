@@ -1,0 +1,315 @@
+      .cart {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 0 2px 0 0 var(--main-darkpurple), 5px 0 0 0 var(--main-darkpurple),
+          0 -2px 0 var(--main-darkpurple), -3px 0 0 var(--main-darkpurple), 0 -8px 0 -3px var(--main-darkpurple),
+          0 3px 0 var(--main-darkpurple), 4px 0 0 0 var(--main-darkpurple),
+          0 -3px 0 0 var(--main-darkpurple), -4px 0 0 0 var(--main-darkpurple), 0 0 0 1px var(--main-darkpurple);
+      }
+
+      .cart_Header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr 2fr 1fr 1fr;
+        grid-template-areas: "checkbox-h Img-h Name-h Type-h Count-h Price-h ashcan-h";
+        padding-block: 15px;
+        padding-inline: 100px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--main-colorpurple);
+        color: var(--white);
+        box-shadow: -4px 0 0 var(--main-colorpurple),
+          4px 0 0 var(--main-colorpurple), 0 -3px 0 var(--main-colorpurple);
+      }
+
+      .allchecked {
+        grid-area: checkbox-h;
+      }
+
+      .bookImg_HeaderGrid {
+        width: 120px;
+        grid-area: Img-h;
+      }
+
+      .bookName_HeaderGrid {
+        grid-area: Name-h;
+      }
+
+      .bookType_HeaderGrid {
+        grid-area: Type-h;
+      }
+
+      .bookCount_HeaderGrid {
+        grid-area: Count-h;
+      }
+
+      .bookPrice_HeaderGrid {
+        grid-area: Price-h;
+      }
+
+      .ashcan_HeaderGrid {
+        grid-area: ashcan-h;
+      }
+
+      .cart_bg {
+        background-color: var(--main-purple);
+        padding-block: 15px;
+        padding-inline: 100px;
+      }
+
+      .cart_Book {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr 2fr 1fr 1fr;
+        grid-template-areas: "check img name type count price ashcan";
+        background-color: var(--white);
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 -3px #b3b3b3, 0 2px 0 var(--black),
+          0 -2px 0 var(--black), -13px 0 0 var(--black), 13px 0 0 var(--black);
+      }
+
+      .checkbox_BookGrid {
+        grid-area: check;
+      }
+
+      .bookImg_BookGrid {
+        grid-area: img;
+      }
+
+      .bookName_BookGrid {
+        grid-area: name;
+      }
+
+      .bookType_BookGrid {
+        grid-area: type;
+      }
+
+      .bookCount_BookGrid {
+        grid-area: count;
+      }
+
+      .bookPrice_BookGrid {
+        grid-area: price;
+      }
+
+      .ashcan_BookGrid {
+        grid-area: ashcan;
+        position: relative;
+        height: 100%;
+      }
+
+
+
+
+
+
+
+      /* 移動買單BTN的容器 */
+      .go-shop-div {
+        display: flex;
+        justify-content: end;
+        max-width: 100%;
+      }
+
+      /* 去買單BTN */
+      .go-shop {
+        margin: 15px;
+        background: #ffe34e;
+        padding: 3px 30px;
+        box-shadow: 0 0 0 1px #ffe34e, 0 5px 0 -1px #ffe34e,
+          4px 0 0 -1px #ffe34e, 0 0 0 1px #ffe34e, 0 -5px 0 -1px #ffe34e,
+          -4px 0 0 -1px #ffe34e, 0 0 0 3px var(--main-yellow),
+          0 6px 0 0 var(--main-yellow), 0 -6px 0 0 var(--main-yellow),
+          5px 0 0 0 var(--main-yellow), -5px 0 0 0 var(--main-yellow);
+      }
+
+      .ipadding {
+        padding-block: 3px;
+        padding-right: 20px;
+      }
+
+
+      /* 數量的+- */
+      .bookCount_BookGrid {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .bookCount_BookGrid .count-part {
+        display: inline-block;
+        width: 100%;
+      }
+
+      .bookCount_BookGrid>.cart-input {
+        background: var(--main-darkpurple);
+        color: var(--white);
+        text-align: center;
+        width: 100%;
+      }
+
+      .bookCount_BookGrid>.subButton {
+        background: var(--main-brightpurple);
+        color: var(--white);
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        box-shadow: 0 0 0 1px var(--main-brightpurple),
+          0 5px 0 -1px var(--main-brightpurple),
+          4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 1px var(--main-brightpurple),
+          0 -5px 0 -1px var(--main-brightpurple),
+          -4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 3px var(--main-darkpurple), 0 6px 0 0 var(--main-darkpurple),
+          0 -6px 0 0 var(--main-darkpurple), 5px 0 0 0 var(--main-darkpurple),
+          -5px 0 0 0 var(--main-darkpurple);
+      }
+
+      .bookCount_BookGrid>.addButton {
+        background: var(--main-brightpurple);
+        color: var(--white);
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        box-shadow: 0 0 0 1px var(--main-brightpurple),
+          0 5px 0 -1px var(--main-brightpurple),
+          4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 1px var(--main-brightpurple),
+          0 -5px 0 -1px var(--main-brightpurple),
+          -4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 3px var(--main-darkpurple), 0 6px 0 0 var(--main-darkpurple),
+          0 -6px 0 0 var(--main-darkpurple), 5px 0 0 0 var(--main-darkpurple),
+          -5px 0 0 0 var(--main-darkpurple);
+      }
+
+      /* 圖片容器 */
+      .img-width {
+        width: 120px;
+        padding-block: 10px;
+      }
+
+      /* 超過字數變... */
+      .p-nowrap {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+
+      /* 全選按鈕 */
+      .allchecked {
+        white-space: nowrap;
+        color: white;
+        border: 1px solid white;
+        border-radius: 20%;
+        background-color: rgba(58, 57, 57, 0.5);
+      }
+
+      /* RWD後顯示字 */
+      .rwd-title {
+        display: none;
+      }
+
+      .ashcan_BookGrid>i {
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0.2;
+        padding: 1px 5px;
+        font-size: 30px;
+      }
+
+
+      /* ------------------- RWD --------------------- */
+
+
+      @media screen and (max-width: 1024px) {
+        .container {
+          max-width: 100%;
+        }
+
+        .cart_bg,
+        .cart_Header {
+          padding-inline: 20px;
+        }
+
+        .allchecked,
+        .bookImg_HeaderGrid,
+        .bookName_HeaderGrid,
+        .bookType_HeaderGrid,
+        .bookCount_HeaderGrid,
+        .bookPrice_HeaderGrid,
+        .ashcan_HeaderGrid,
+        .bookImg_BookGrid,
+        .bookName_BookGrid,
+        .bookType_BookGrid,
+        .bookCount_BookGrid,
+        .bookPrice_BookGrid {
+          margin-right: 15px;
+        }
+
+      }
+
+      @media screen and (max-width: 860px) {
+        .cart_Header {
+          grid-template-columns: 1fr 1fr 2fr 1fr 2fr 1fr 1fr;
+          grid-template-areas: "checkbox-h Name-h Name-h Img-h Count-h Price-h ashcan-h";
+        }
+
+        .bookType_HeaderGrid {
+          display: none;
+          margin: 0;
+        }
+
+
+        .cart_Book {
+          grid-template-columns: 1fr 1fr 3fr 2fr 1fr 1fr;
+          grid-template-areas:
+            "check img name count price ashcan"
+            "check img type count price ashcan"
+          ;
+        }
+
+        .bookType_BookGrid {
+          text-align: left;
+        }
+
+        .bookType_BookGrid>.rwd-title {
+          display: inline-block;
+        }
+      }
+
+      @media screen and (max-width: 720px) {
+        .cart_Header {
+          grid-template-columns: 1fr 1fr 2fr 1fr 2fr 1fr;
+          grid-template-areas: "checkbox-h Name-h Name-h Img-h Count-h ashcan-h";
+        }
+
+        .bookPrice_HeaderGrid {
+          display: none;
+          margin: 0;
+
+        }
+
+        .cart_Book {
+          grid-template-columns: 1fr 1fr 3fr 2fr 1fr;
+          grid-template-areas:
+            "check img name count ashcan"
+            "check img price count ashcan"
+            "check img type count ashcan"
+
+          ;
+        }
+
+        .bookPrice_BookGrid {
+          text-align: left;
+        }
+
+        .bookPrice_BookGrid>.rwd-title {
+          display: inline-block;
+        }
+
+      }

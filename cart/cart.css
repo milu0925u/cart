@@ -1,0 +1,64 @@
+.cart-div {
+    position: relative;
+}
+
+
+.cart-input {
+    height: 40px;
+    text-align: center;
+    color: var(--white);
+    border-radius: 5px;
+    background: var(--main-darkpurple);
+}
+
+.cart-input-btn {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: var(--main-darkpink);
+    color: var(--white);
+    padding-inline: 20px;
+    padding-block: 5px;
+    box-shadow: 3px 0 0 var(--main-darkpink), 0 3px 0 var(--main-darkpink), -3px 0 0 var(--main-darkpink), 0 -3px 0 var(--main-darkpink),
+        6px 0 0 #b3504a, 0 6px 0 #b3504a, 2px 2px 0 1px #b3504a;
+}
+
+
+.part1-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "step"
+        "cart"
+        "coupon"
+        "point"
+        "go";
+    grid-row-gap: 20px;
+}
+
+.part2-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'step'
+    'information'
+    'delivery'
+    'pay'
+    'cart'
+    'go'
+    ;
+    grid-row-gap: 20px;
+}
+
+.part3-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'step'
+    'cart'
+    'coupon'
+    'information'
+    'go'
+    ;
+    grid-row-gap: 20px;
+}

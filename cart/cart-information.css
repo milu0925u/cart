@@ -1,0 +1,115 @@
+.img-size {
+    width: 100px;
+}
+
+.center-index {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pay-radio input:checked+.input-choose-style {
+    padding: 20px;
+    margin: auto;
+    border: 5px solid var(--main-brightpurple);
+    border-radius: 10%;
+}
+
+/* 基本資料框 */
+.data-frame {
+    max-width: 100%;
+    background: var(--white);
+    padding: 10px 50px;
+    box-shadow: 0 -5px 0 var(--white), 0 5px 0 var(--white), 5px 0 0 var(--white), -5px 0 0 var(--white),
+        0 -8px 0 var(--black), 0 8px 0 var(--black), 8px 0 0 var(--black), -8px 0 0 var(--black),
+        0 0 0 4px var(--black);
+}
+
+/* 將內容置齊 */
+.data-frame-s {
+    margin-top: 30px;
+}
+
+.radio-img-flex {
+    padding: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+/* 基本資料輸入input */
+.person-input {
+    width: 100%;
+    margin: 10px;
+    background:
+        linear-gradient(135deg, transparent 5px, var(--white) 0) top left,
+        linear-gradient(-135deg, transparent 5px, var(--white) 0) top right,
+        linear-gradient(-45deg, transparent 5px, var(--white) 0) bottom right,
+        linear-gradient(45deg, transparent 5px, var(--white) 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(3px 0 0 var(--main-purple)) drop-shadow(-3px 0 0 var(--main-purple)) drop-shadow(0 3px 0 var(--main-purple)) drop-shadow(0 -3px 0 var(--main-purple));
+}
+
+/* 選擇門市btn */
+.choose-shop-btn {
+    margin: 10px;
+    width: 100%;
+    max-width: 100%;
+    background: var(--main-yellow);
+    box-shadow: 0 0 0 1px var(--main-yellow), 0 5px 0 -1px var(--main-yellow),
+        4px 0 0 -1px var(--main-yellow), 0 0 0 1px var(--main-yellow), 0 -5px 0 -1px var(--main-yellow),
+        -4px 0 0 -1px var(--main-yellow), 0 0 0 3px var(--main-orange),
+        0 6px 0 0 var(--main-orange), 0 -6px 0 0 var(--main-orange),
+        5px 0 0 0 var(--main-orange), -5px 0 0 0 var(--main-orange);
+}
+
+/* 資料相同btn */
+.same-name-btn {
+    margin-inline: 30px;
+    padding-inline: 50px;
+    padding-block: 5px;
+    color: var(--white);
+    background:
+        linear-gradient(135deg, transparent 3px, var(--main-brightpurple) 0) top left,
+        linear-gradient(-135deg, transparent 3px, var(--main-brightpurple) 0) top right,
+        linear-gradient(-45deg, transparent 3px, var(--main-brightpurple) 0) bottom right,
+        linear-gradient(45deg, transparent 3px, var(--main-brightpurple) 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(5px 5px 0 #B998FF);
+
+}
+
+/* 發票-確認btn */
+.receipt-ok-btn {
+    padding-inline: 20px;
+    padding-block: 5px;
+    color: var(--white);
+    background:
+        linear-gradient(135deg, transparent 3px, var(--main-colorpurple) 0) top left,
+        linear-gradient(-135deg, transparent 3px, var(--main-colorpurple) 0) top right,
+        linear-gradient(-45deg, transparent 3px, var(--main-colorpurple) 0) bottom right,
+        linear-gradient(45deg, transparent 3px, var(--main-colorpurple) 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(3px 3px 0 var(--main-brightpurple));
+}
+
+/* 訂單資訊 */
+.cart-item-hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding-block: 15px;
+    background:var(--main-colorpurple);
+    box-shadow: 0 10px 0 var(--main-colorpurple),0 -10px 0 var(--main-colorpurple),10px 0 0 var(--main-colorpurple),-10px 0 0 var(--main-colorpurple),
+    0 13px 0 var(--black),0 -13px 0 var(--black),13px 0 0 var(--black),-13px 0 0 var(--black),
+    0 -5px 0 5px var(--black),0 5px 0 5px var(--black),5px 0 0 5px var(--black),-5px 0 0 5px var(--black);
+}

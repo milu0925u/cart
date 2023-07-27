@@ -1,0 +1,117 @@
+.cart-step {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-areas: ". step1 line1 step2 line2 step3 .";
+}
+
+.shopping-part1 {
+  grid-area: step1;
+}
+
+.shopping-part2 {
+  grid-area: step2;
+}
+
+.shopping-part3 {
+  grid-area: step3;
+}
+
+.line-package1 {
+  grid-area: line1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-package2 {
+  grid-area: line2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* 步驟 */
+.cart-part-ok {
+  background: var(--main-orange);
+  box-shadow: 2px 0 0 var(--main-orange), 5px 0 0 #b36b00,
+    0 2px 0 var(--main-orange), 0 5px 0 #b36b00,
+    5px 0 0 var(--main-orange), 0 1px 0 var(--main-orange),
+    5px 0 0 var(--main-orange), 0 1px 0 var(--main-orange),
+    0 5px 0 var(--main-orange), 0 5px 0 0 var(--main-orange),
+    5px 0 0 0 var(--main-orange), 0 -5px 0 0 var(--main-orange),
+    -5px 0 0 0 var(--main-orange), 0 -8px 0 var(--black),
+    0 8px 0 var(--black), -8px 0 0 var(--black), 8px 0 0 var(--black),
+    3px 0 0 3px var(--black), -3px 0 0 3px var(--black),
+    0 3px 0 3px var(--black), 0 -3px 0 3px var(--black);
+  color: var(--white);
+}
+
+.cart-part-check {
+  width: 50px;
+  height: 50px;
+  background: #5410ab;
+
+}
+
+.cart-part {
+  background: var(--main-purple);
+  box-shadow: 2px 0 0 var(--main-purple), 5px 0 0 #5410ab,
+    0 2px 0 var(--main-purple), 0 5px 0 #5410ab,
+    5px 0 0 var(--main-purple), 0 1px 0 var(--main-purple),
+    0 5px 0 var(--main-purple), 0 5px 0 0 var(--main-purple),
+    5px 0 0 0 var(--main-purple), 0 -5px 0 0 var(--main-purple),
+    -5px 0 0 0 var(--main-purple), 0 -8px 0 var(--black),
+    0 8px 0 var(--black), -8px 0 0 var(--black), 8px 0 0 var(--black),
+    3px 0 0 3px var(--black), -3px 0 0 3px var(--black),
+    0 3px 0 3px var(--black), 0 -3px 0 3px var(--black);
+  color: var(--white);
+}
+
+
+/* 步驟置中 */
+.cartlist-location {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 進度線 */
+.cart-part-line {
+  width: 10px;
+  height: 10px;
+  background: var(--main-darkpurple);
+  box-shadow: 0 0 0 1px var(--main-purple);
+  margin-inline: 5px;
+}
+
+
+@media screen and (max-width: 860px) {
+  .cartlist-location {
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
+  }
+
+  .cart-part-line {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cartlist-location {
+    width: 80px;
+    height: 80px;
+    font-size: 10px;
+  }
+
+  .cart-part-line {
+    width: 5px;
+    height: 5px;
+  }
+}

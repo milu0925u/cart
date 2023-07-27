@@ -1,244 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style/primary.css" />
-    <link rel="stylesheet" href="./style/cart.css" />
-    <link rel="stylesheet" href="./style/cart-part.css" />
-    <link rel="stylesheet" href="./style/cart-point.css" />
 
-    <link rel="stylesheet" href="./style/pixelStyle.css" />
-    <link rel="stylesheet" href="./style/memberCoupon.css" />
-    <style>
-      /* .area {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "step coupon"
-          "cart coupon"
-          "cart point"
-          "cart go"
-          "cart go";
-      } */
-      :root {
-        --main-purple: #512893;
-        --main-darkpurple: #0d0733;
-        --main-brightpurple: #9b6cff;
-        --main-colorpurple: #7817f3;
-        --main-yellow: #f3d52e;
-        --main-orange: #ff9900;
-        --main-darkpink: #ff7269;
-        --main-brightpink: #ff93c7;
-        --white: #ffffff;
-        --black: #000000;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./cart/primary.css" />
+  <link rel="stylesheet" href="./cart/cart.css" />
+  <link rel="stylesheet" href="./cart/cart-item.css" />
+  <link rel="stylesheet" href="./cart/cart-part.css" />
+  <link rel="stylesheet" href="./cart/cart-point.css" />
+  <link rel="stylesheet" href="./cart/cart-black.css" />
+  <link rel="stylesheet" href="./cart/cart-coupon.css" />
 
-    </style>
-  </head>
-  <body>
-    <div class="area">
-      <div class="step">
-        <div></div>
-        <div class="cart-step">
-          <div class="r"></div>
-          <div class="cart-part1 cartlist-location">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>購物清單</span>
-          </div>
-          <div class="line-package">
-            <div class="cart-part-line"></div>
-            <div class="cart-part-line"></div>
-          </div>
-          <div class="cart-part2 cartlist-location">
-            <i class="fa-regular fa-file-lines"></i>
-            <span>填寫資料</span>
-          </div>
-          <div class="line-package">
-            <div class="cart-part-line"></div>
-            <div class="cart-part-line"></div>
-          </div>
-          <div class="cart-part3 cartlist-location">
-            <i class="fa-solid fa-check"></i>
-            <span>訂單確認</span>
-          </div>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="part1-area">
+      <!-- 購物步驟 -->
+      <div class="cart-step">
+        <div class="shopping-part1 cart-part-ok cartlist-location">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>購物清單</span>
         </div>
-        <div></div>
+        <div class="line-package1">
+          <div class="cart-part-line"></div>
+          <div class="cart-part-line"></div>
+        </div>
+        <div class="shopping-part2 cart-part cartlist-location">
+          <i class="fa-regular fa-file-lines"></i>
+          <span>填寫資料</span>
+        </div>
+        <div class="line-package2">
+          <div class="cart-part-line"></div>
+          <div class="cart-part-line"></div>
+        </div>
+        <div class="shopping-part3 cart-part cartlist-location">
+          <i class="fa-solid fa-check"></i>
+          <span>訂單確認</span>
+        </div>
       </div>
+
+
+      <!-- 商品 -->
       <div class="cart">
+        <!-- 商品列表標題 -->
         <div class="cart_Header">
-          <div class="checkbox_HeaderGrid">
-            <button class="allchecked">全選</button>
-          </div>
           <div class="bookImg_HeaderGrid"></div>
-          <div class="bookName_HeaderGrid">書名</div>
+          <div class="bookName_HeaderGrid text-start">書名</div>
           <div class="bookType_HeaderGrid">類型</div>
           <div class="bookCount_HeaderGrid">數量</div>
           <div class="bookPrice_HeaderGrid">金額</div>
           <div class="ashcan_HeaderGrid"></div>
         </div>
 
+        <!-- 商品列表 -->
         <div class="cart_bg">
           <div class="cart_Book">
-            <div class="checkbox_BookGrid">
-              <input type="checkbox" />
-            </div>
             <div class="bookImg_BookGrid img-width">
-              <img src="./img/003.jpg" alt="" class="img" />
+              <img src="./img/003.jpg" alt="" class="w-100" />
             </div>
-            <div class="bookName_BookGrid">
+            <div class="bookName_BookGrid text-start">
               <span><b>原子習慣</b></span>
               <span class="p-nowrap">
                 此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
               </span>
             </div>
-            <div class="bookType_BookGrid">文學</div>
+            <div class="bookType_BookGrid"><span class="rwd-title"><b>類型：</b></span>文學</div>
             <div class="bookCount_BookGrid">
-              <button class="subButton">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <input type="text" value="1" class="cart-input" />
-              <button class="addButton">
-                <i class="fa-solid fa-plus"></i>
-              </button>
+              <span class="rwd-title"><b>數量：</b></span><span class="count-part">1</span>
             </div>
-            <div class="bookPrice_BookGrid">$300</div>
-            <div class="ashcan_BookGrid">
-              <i class="fa-regular fa-trash-can"></i>
-            </div>
+            <div class="bookPrice_BookGrid"><span class="rwd-title"><b>價格：</b></span>$300</div>
           </div>
           <div class="cart_Book">
-            <div class="checkbox_BookGrid">
-              <input type="checkbox" />
-            </div>
             <div class="bookImg_BookGrid img-width">
-              <img src="./img/003.jpg" alt="" class="img" />
+              <img src="./img/003.jpg" alt="" class="w-100" />
             </div>
-            <div class="bookName_BookGrid">
+            <div class="bookName_BookGrid text-start">
               <span><b>原子習慣</b></span>
               <span class="p-nowrap">
                 此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
               </span>
             </div>
-            <div class="bookType_BookGrid">文學</div>
+            <div class="bookType_BookGrid"><span class="rwd-title"><b>類型：</b></span>文學</div>
             <div class="bookCount_BookGrid">
-              <button class="subButton">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <input type="text" value="1" class="cart-input" />
-              <button class="addButton">
-                <i class="fa-solid fa-plus"></i>
-              </button>
+              <span class="rwd-title"><b>數量：</b></span><span class="count-part">1</span>
             </div>
-            <div class="bookPrice_BookGrid">$300</div>
-            <div class="ashcan_BookGrid">
-              <i class="fa-regular fa-trash-can"></i>
-            </div>
+            <div class="bookPrice_BookGrid"><span class="rwd-title"><b>價格：</b></span>$300</div>
           </div>
-          <div class="cart_Book">
-            <div class="checkbox_BookGrid">
-              <input type="checkbox" />
-            </div>
-            <div class="bookImg_BookGrid img-width">
-              <img src="./img/003.jpg" alt="" class="img" />
-            </div>
-            <div class="bookName_BookGrid">
-              <span><b>原子習慣</b></span>
-              <span class="p-nowrap">
-                此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
-              </span>
-            </div>
-            <div class="bookType_BookGrid">文學</div>
-            <div class="bookCount_BookGrid">
-              <button class="subButton">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <input type="text" value="1" class="cart-input" />
-              <button class="addButton">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div>
-            <div class="bookPrice_BookGrid">$300</div>
-            <div class="ashcan_BookGrid">
-              <i class="fa-regular fa-trash-can"></i>
-            </div>
-          </div>
-          <div class="cart_Book">
-            <div class="checkbox_BookGrid">
-              <input type="checkbox" />
-            </div>
-            <div class="bookImg_BookGrid img-width">
-              <img src="./img/003.jpg" alt="" class="img" />
-            </div>
-            <div class="bookName_BookGrid">
-              <span><b>原子習慣</b></span>
-              <span class="p-nowrap">
-                此刻的你，想想看，是什麼原因讓你發現這本書？是書名吸引了你？還是書封上某個圖案、顏色，或是因為它被擺在架上剛好被你看到？又或者，你是因為一則書評、一位朋友的介紹，直接從網路訂書寄到家裡？無論如何，這些都是某個原因而促發的行動。
-              </span>
-            </div>
-            <div class="bookType_BookGrid">文學</div>
-            <div class="bookCount_BookGrid">
-              <button class="subButton">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <input type="text" value="1" class="cart-input" />
-              <button class="addButton">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div>
-            <div class="bookPrice_BookGrid">$300</div>
-            <div class="ashcan_BookGrid">
-              <i class="fa-regular fa-trash-can"></i>
-            </div>
-          </div>
-          <div class="go-shop-div">
-            <button class="go-shop">
-              <i
-                class="fa-solid fa-caret-right ipadding"
-                style="color: #000000"
-              ></i>
-              <b>去買單</b>
-            </button>
-          </div>
+
         </div>
       </div>
+      <!-- 優惠卷 -->
+      <div class="coupon-bg">
+        <div class="coupon-header">
+          <div class="coupon-header-left">
+            <!-- 優惠卷名稱 -->
+            <h3 class="hiddentitle pe-5"><i class="fa-solid fa-ticket me-2"></i>優惠券</h3>
+            <!-- 輸入框 -->
+            <div class="cart-div">
+              <input type="text" class="cart-input" placeholder="優惠卷輸入">
+              <button class="cart-input-btn">確認</button>
+            </div>
+          </div>
+          <!-- 已領取/所有優惠 -->
+          <div class="coupon-header-bg">
+            <input class="state" type="checkbox" id="coupon_toggle">
+            <div class="checkbox">
+              <label for="coupon_toggle" class="slide">
+                <label for="coupon_toggle" class="toggle coupon-header-line"></label>
+                <label for="coupon_toggle" class="text">已領取</label>
+                <label for="coupon_toggle" class="text">所有優惠</label>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 平台用優惠券 -->
+        <div class="coupon-ticket">
+          <button type="button" class="col-3 couponName">
+            <i class="fa-solid fa-gift fa-2xl mb-4"></i>
+            <span class="font-s">生日優惠卷</span>
+          </button>
+          <h5 class="coupon-hidden1 my-auto px-3">生日優惠券</h5>
+          <div class="my-auto">
+            <h4 class="fw-bold">折<span class="pixel-font amount-l">1000</span>元</h4>
+            <span class="font-s">有效期限<span class="mx-2">2023/01/01~2023/12/31</span></span>
+          </div>
+          <div class="coupon-hidden2">
+            <span class="Information-coupon font-s">低消 1000 元</span>
+            <span class="Information-coupon font-s">限領 1 張</span>
+            <span class="Information-coupon font-s">剩餘 822 張</span>
+          </div>
+          <button class="coupon-ticket-right fw-bold">
+            使用
+          </button>
+        </div>
+      </div>
+      <!-- 點數 -->
       <div class="point">
         <div class="point-bg">
           <div class="point-header">
             <span>當前點數</span>
-            <input type="text" value="100" class="point-input" />
+            <label class="point-label-color">100</label>
             <span>點</span>
           </div>
-          <div class="point-radio-group">
-            <div><input type="radio" />全部折抵</div>
-            <div>
-              <input type="radio" />部分折抵
-              <input type="text" class="point-input" />
-              <button class="point-input-btn">確定</button>
+          <div class="point-radio-group cart-div">
+            <div class="point-1">
+              <input type="radio" name="point-group" />全部折抵
+            </div>
+            <div class="point-2">
+              <input type="radio" name="point-group" />部分折抵
+              <input type="text" class="cart-input" />
+              <button class="cart-input-btn">確定</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="go"></div>
+      <!-- 前往結帳 -->
+      <div class="go">
+        <div class="cart-next-p">
+          <div><i
+              class="fa-solid fa-square-full fa-2xs pe-3"></i>已選擇<span>5</span>樣商品，總額為<span>1495</span>元，折扣完為<span>1295</span>元
+          </div>
+          <div><i class="fa-solid fa-square-full fa-2xs pe-3"></i>套用<span
+              class="cart_coupon_name">生日優惠卷</span>折抵<span>100</span>元</div>
+          <div><i class="fa-solid fa-square-full fa-2xs pe-3"></i>使用<span>100</span>點折抵金額</div>
+          <div><i class="fa-solid fa-square-full fa-2xs pe-3"></i>在消費<span>1505</span>元至您的訂單，即可享免運配送，是否前往加購? <a
+              href="#"><i class="fa-regular fa-circle-right"></i></a></div>
+        </div>
+
+        <div class="cart-next-btn">
+          <a class="goshop" href="#">返回購物</a>
+          <button class="gowrite"><i class="fa-solid fa-caret-right"></i>　填寫資料</button>
+        </div>
+      </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script>
+    // 已領取和所有優惠的切換
+    let toggleBox = document.querySelector('.state')
+    let text = document.querySelectorAll('.text')
+    text[0].style.color = 'black';
+    text[1].style.color = 'white';
+    toggleBox.addEventListener('change', function () {
+      // console.log(text[0])
+      if (toggleBox.checked) {
+        text[0].style.color = 'white';
+        text[1].style.color = 'black';
+      } else {
+        text[0].style.color = 'black';
+        text[1].style.color = 'white';
+      }
+    })
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input-group {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .form-control {
+            flex: 1;
+            border: none;
+        }
+    </style>
+
+
+<style>
+    @media screen and (max-width: 1400px) {
+
+      .bookType_HeaderGrid,
+      .bookCount_HeaderGrid,
+      .bookPrice_HeaderGrid,
+      .bookImg_HeaderGrid {
+        display: none;
+      }
+
+      /* 標題 */
+      .cart_Header {
+        grid-template-columns: 5% 5% 5% 1fr 5% 25% 3fr 5%;
+        grid-template-areas: "trashbox trashbox checkAll . title title title title";
+      }
+
+      .allchecked {
+        grid-area: checkAll;
+      }
+
+      .bookName_HeaderGrid {
+        grid-area: title;
+      }
+
+      .ashcan_HeaderGrid {
+        grid-area: trashbox;
+      }
+
+      /* 內容 */
+      .cart_Book {
+        grid-template-columns: 5% 5% 1fr 1fr 25% 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "  .       .   img name name name"
+          "  .       .   img name name name"
+          "trash checked img type   .    . "
+          "  .      .    img price  .    . "
+          "  .      .     . count  count count "
+        ;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+
+
+      }
+
+      .checkbox_BookGrid {
+        grid-area: checked;
+      }
+
+      .bookImg_BookGrid {
+        grid-area: img;
+      }
+
+      .bookName_BookGrid {
+        grid-area: name;
+        position: static;
+        display: inline;
+      }
+
+
+      .bookType_BookGrid {
+        grid-area: type;
+        display: inline;
+
+      }
+
+      .bookCount_BookGrid {
+        grid-area: count;
+        position: static;
+        display: flex;
+        align-items: center;
+      }
+
+      .bookCount_BookGrid>.cart-input {
+        flex: 1;
+        background: var(--main-darkpurple);
+        color: var(--white);
+        position: static;
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .bookCount_BookGrid>.subButton {
+        background: var(--main-brightpurple);
+        color: var(--white);
+        position: static;
+        box-shadow: 0 0 0 1px var(--main-brightpurple),
+          0 5px 0 -1px var(--main-brightpurple),
+          4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 1px var(--main-brightpurple),
+          0 -5px 0 -1px var(--main-brightpurple),
+          -4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 3px var(--main-darkpurple), 0 6px 0 0 var(--main-darkpurple),
+          0 -6px 0 0 var(--main-darkpurple), 5px 0 0 0 var(--main-darkpurple),
+          -5px 0 0 0 var(--main-darkpurple);
+      }
+
+      .bookCount_BookGrid>.addButton {
+        background: var(--main-brightpurple);
+        color: var(--white);
+        position: static;
+        box-shadow: 0 0 0 1px var(--main-brightpurple),
+          0 5px 0 -1px var(--main-brightpurple),
+          4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 1px var(--main-brightpurple),
+          0 -5px 0 -1px var(--main-brightpurple),
+          -4px 0 0 -1px var(--main-brightpurple),
+          0 0 0 3px var(--main-darkpurple), 0 6px 0 0 var(--main-darkpurple),
+          0 -6px 0 0 var(--main-darkpurple), 5px 0 0 0 var(--main-darkpurple),
+          -5px 0 0 0 var(--main-darkpurple);
+      }
+
+      .bookPrice_BookGrid {
+        grid-area: price;
+        display: inline;
+      }
+
+      .ashcan_BookGrid {
+        grid-area: trash;
+      }
+    }
+  </style>
+
+  <style>
+    @media screen and (max-width: 860px) {
+
+.bookType_HeaderGrid,
+.bookCount_HeaderGrid,
+.bookPrice_HeaderGrid,
+.bookImg_HeaderGrid {
+  display: none;
+}
+
+.cart_Header {
+  grid-template-columns: 10% 1fr 4fr;
+  grid-template-areas: "checkbox-h Img-h Name-h";
+}
+
+.bookType_HeaderGrid,
+.bookCount_HeaderGrid,
+.bookPrice_HeaderGrid,
+.ashcan_HeaderGrid {
+  display: none;
+}
+
+.cart_Book {
+  grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-areas:
+    "check img name name name ."
+    "check img price type . ashcan"
+    "check img count count count ."
+  ;
+}
+
+.bookImg_BookGrid,
+.bookName_BookGrid,
+.bookType_BookGrid,
+.bookCount_BookGrid,
+.bookPrice_BookGrid,
+.ashcan_BookGrid {
+  margin-right: 15px;
+}
+
+.bookPrice_BookGrid,
+.bookType_BookGrid{
+  text-align: left;
+}
+
+}
+  </style>
+</head>
+
+<body>
+    <div class="input-group">
+        <input type="text" class="form-control" value="123">
+        <button>確定</button>
+    </div>
+</body>
+
+</html>
